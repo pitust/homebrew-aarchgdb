@@ -51,4 +51,3 @@ class Aarch64ElfGdb < Formula
           shell_output("#{bin}/aarch64-elf-gdb -batch -ex 'info address _start' a.out")
   end
 end
-
