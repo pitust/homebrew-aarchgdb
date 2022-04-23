@@ -1,11 +1,11 @@
-# Pitust Aarchgdb
+# aarch64-elf-gdb tap
 
-## How do I install these formulae?
+## How do I install these formula?
 
-`brew install pitust/aarchgdb/<formula>`
+`brew install pitust/aarchgdb/aarch64-elf-gdb`
 
-Or `brew tap pitust/aarchgdb` and then `brew install <formula>`.
+Or `brew tap pitust/aarchgdb` and then `brew install aarch64-elf-gdb`.
 
 ## Documentation
 
-`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+lmao
