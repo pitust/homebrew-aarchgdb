@@ -12,7 +12,6 @@ class Aarch64ElfGdb < Formula
     formula "gdb"
   end
 
-  depends_on "aarch64-elf-gcc" => :test
   depends_on "gmp"
   depends_on "python@3.10"
   depends_on "xz"
@@ -42,12 +41,5 @@ class Aarch64ElfGdb < Formula
       system "make"
       system "make", "install-gdb"
     end
-  end
-
-  test do
-    (testpath/"test.c").write "void _start(void) {}"
-    system "#{Formula["aarch64-elf-gcc"].bin}/aarch64-elf-gcc", "-g", "-nostdlib", "test.c"
-    assert_match "Symbol \"_start\" is a function at address 0x",
-          shell_output("#{bin}/aarch64-elf-gdb -batch -ex 'info address _start' a.out")
   end
 end
